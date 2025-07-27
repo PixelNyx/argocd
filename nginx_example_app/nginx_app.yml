@@ -13,7 +13,7 @@ spec:
     path: manifests
     targetRevision: HEAD
   syncPolicy:
-    automatedSyncs:
+    automated:
       prune: true  # Delete undefined resources
       selfHeal: true  # Autosyncs if drift detected
     syncOptions:
