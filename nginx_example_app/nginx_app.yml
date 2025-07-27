@@ -13,5 +13,8 @@ spec:
     path: manifests
     targetRevision: HEAD
   syncPolicy:
+    automatedSyncs:
+      prune: true  # Delete undefined resources
+      selfHeal: true  # Autosyncs if drift detected
     syncOptions:
       - CreateNamespace=true
