@@ -5,13 +5,13 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: argocd
-    server: "https://kubernetes.default.svc"
+    namespace: default
+    server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: "https://github.com/PixelNyx/Practice.git"
-    path: "argocd/nginx_example_app/argocd_app"
-    targetRevision: master
+    repoURL: https://github.com/PixelNyx/simple_nginx_test
+    path: manifests
+    targetRevision: HEAD
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
